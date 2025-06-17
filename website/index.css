@@ -69,7 +69,7 @@
         /* Hero Section */
         .hero {
            /*background: linear-gradient(135deg, #6695ca 0%, #76d5f0 100%);*/
-           background-image:url(images/pexels-thanhhoa-tran-640546-1462892.jpg) ;
+           background-image:url(images/images/pexels-thanhhoa-tran-640546-1462892.jpg) ;
            background-size: cover;
            background-position: center;
            background-repeat: no-repeat;
@@ -82,7 +82,7 @@
             color: white;
             position: relative;
             overflow: hidden;
-            flex: ;
+            /* flex: ; */
         }
 
         .hero::before {
