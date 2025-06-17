@@ -17,7 +17,7 @@
 
         /* Header & Navigation */
         header {
-           /* background: linear-gradient(135deg, #091f4f 0%, #5f8da1 100%);*/
+           /* background: linear-gradient(135deg, #091f4f 0%, #5f8da1 100%); */
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -53,7 +53,7 @@
         }
 
         .nav-links a {
-            color: white;
+            color: black;
             text-decoration: none;
             transition: all 0.3s ease;
             position: relative;
@@ -169,14 +169,14 @@
         }
 
         .section:nth-child(even) {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
         }
 
         .section h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
-            background: linear-gradient(45deg, #122266, #82adbb);
+            background: linear-gradient(45deg, #196612, #5c9b49);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;

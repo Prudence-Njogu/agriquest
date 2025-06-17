@@ -6,6 +6,7 @@
     <title>AgriQuest</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     
 </head>
@@ -35,32 +36,48 @@
         
         <!--To add a section on how the game works-->
 
-        <h2>How it Works</h2>
+        <section style="background: linear-gradient(to right, #f0fcab, #60bf8f);">
+            
+        <h2 style="font-size: 50px; text-align: center;">How it Works</h2>
         <section id="HOW IT WORKS" class="section row">
-            <div class="col-md-3 pl-2">
+            <div class="col-md-6 text-center">
                 <img src="images/images/hand-holding-plant.svg" alt="" width="30%">
+                <h3>Start Your Farm</h3>
+                <p>Begin with your own farm plot.</p>
                 
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6 text-center">
                 <img src="images/images/robot.svg" alt="" width="40%"> 
-            </div>
-            <div class="col-md-3">
-                 <img src="images/images/decision.svg" alt="" width="50%">
-            </div>
-            <div class="col-md-3">
-                 <img src="images/images/piggy-bank.svg" alt="" width="50%">
+                <h3>Ask AI Assistant</h3>
+                <p>Get crop or weather advice</p>
             </div>
         </section>
 
+        <section id="HOW IT WORKS" class="section row">
+            <div class="col-md-6 text-center">
+                 <img src="images/images/decision.png" alt="" width="50%">
+                 <h3>Make Decisions</h3>
+                 <p>Plant, irrigate, fertilize</p>
+            </div>
+            <div class="col-md-6 text-center">
+                 <img src="images/images/piggy-bank.svg" alt="" width="40%">
+                 <h3>Earn & Reinvest</h3>
+                 <p>Grow,
+                    sell and reinvest points
+                 </p>
+            </div>
+        </section>
+        </section>
 
-        <section id="OUR TEAM" class="section">
+
+        <section id="ABOUT" class="section">
             <div class="container">
                 <h2>About Us</h2>
                 <p style="text-align: center; font-size: 1.1rem; color: #666; max-width: 800px; margin: 0 auto;">
                    AgriQuest is a a game-based learning platform that allows learners to diversify their knowledge on crop farming and livestock rearing, beating all odds on the agricultural field by ensuring that it's engaging and learning-friendly. Envisioning a better tomorrow for Our Children by leveraging AgriQuest!
                 </p>
-                
-                <div class="cards">
+                <h2 id="OUR TEAM" class="mt-5">Our Team</h2>
+                <div  class="cards">
                     <div class="card">
                         <h3>PRUDENCE NJOGU</h3>
                         <p> Project Lead and Game Designer</p>
@@ -90,19 +107,77 @@
                         <h3>MISSION</h3>
                         <h4>CULTIVATING AGRICULTURAL UNDERSTANDING THROUGH PLAY.</h4>
                     </div>
-                    <div class="card">
-                        <h3>WHAT ARE WE SOLVING?</h3>
-                        <ul>
-                        <h4>Outdated perception on agriculture</h4><br>
-                        
-                        <h4>Curriculum gap</h4><br>
-                       
-                        <h4>Youth disconnection</h4><br>
-                        
-                        <h4>Limited digital tools</h4><br>
-                        </ul>
-                        
-                    </div>
+                     <div class="card">
+    <h3>WHAT ARE WE SOLVING?</h3>
+    <div class="accordion" id="accordionSolve">
+
+      <!-- 1 -->
+      <div class="accordion-item">
+        <h4 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Outdated perception on agriculture
+          </button>
+        </h4>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+          data-bs-parent="#accordionSolve">
+          <div class="accordion-body">
+            Agriculture is seen as boring, not relevant to youth's future.
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="accordion-item">
+        <h4 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Youth Disconnection
+          </button>
+        </h4>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionSolve">
+          <div class="accordion-body">
+            Youth are disconnected from farming; it's seen as "dirty work."
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="accordion-item">
+        <h4 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Curriculum Gap
+          </button>
+        </h4>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionSolve">
+          <div class="accordion-body">
+            CBC requires practical agriculture, but schools lack resources.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="accordion-item">
+        <h4 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Limited Digital Tools
+          </button>
+        </h4>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+          data-bs-parent="#accordionSolve">
+          <div class="accordion-body">
+            Few digital tools make agriculture fun or tech-driven.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+                    
                     <div class="card">
                         <h3>OUR SOLUTIONS</h3>
                         <ul>
@@ -122,7 +197,7 @@
         </section>
     </main>
 
-    <footer id="contact">
+    <footer id="CONTACT">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
