@@ -47,5 +47,21 @@
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
-    
+         document.querySelector('.cta-button').addEventListener('click', () => {
+      alert('Comming Soon!');
+         });
+        //on scroll navbar  changes colour from white to black
+        // Change navbar text color on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelector('.nav-links');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navLinks.classList.add('scrolled');
+    } else {
+      navLinks.classList.remove('scrolled');
+    }
+  });
+});
+
         //add an on click, the app is coming soon
