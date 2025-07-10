@@ -1,4 +1,19 @@
+function showComingSoon() {
+  const popup = document.getElementById("comingSoonPopup");
+  if (popup) {
+    popup.style.display = "flex";
+  }
+}
 
+function closePopup() {
+  const popup = document.getElementById("comingSoonPopup");
+  if (popup) {
+    popup.style.display = "none";
+  }
+}
+
+        
+        
         // Add smooth scrolling behavior for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -47,5 +62,21 @@
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(card);
         });
-    
+    //      document.querySelector('.cta-button').addEventListener('click', () => {
+    //   alert('Comming Soon!');
+    //      });
+        //on scroll navbar  changes colour from white to black
+        // Change navbar text color on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelector('.nav-links');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navLinks.classList.add('scrolled');
+    } else {
+      navLinks.classList.remove('scrolled');
+    }
+  });
+});
+
         //add an on click, the app is coming soon
