@@ -1,4 +1,4 @@
-## SYSTEM DESIGN DOCUMENT
+## System Design Document
 
 Introduction
 
@@ -90,23 +90,23 @@ AgriQuest AI is designed using a modular, component-based architecture following
 
 The system primarily follows a layered and event-driven architecture composed of the following core layers:
 
-## 1.     Presentation Layer (UI Layer):
+### 1.     Presentation Layer (UI Layer):
 
 This includes the user interface components such as buttons (“Plant”, “Use Hoe”, “Water”), score displays and the AgriBot dialogue box. All user interactions, like tapping on a soil tile or choosing a tool, are captured here and passed to the logic layer.
 
-## 2.     Game Logic Layer (Gameplay Scripts):
+### 2.     Game Logic Layer (Gameplay Scripts):
 
 This layer contains C# scripts attached to Unity GameObjects. It handles player actions such as soil preparation, crop growth timers and harvesting. GameObjects respond to events like user taps using Unity’s input system (e.g., OnMouseDown, OnPointerClick for mobile touch).
 
-## 3.     AI Assistant Layer (AgriBot):
+### 3.     AI Assistant Layer (AgriBot):
 
 A rules-based logic layer that delivers predefined chatbot responses. This component operates in response to user-selected questions and offers feedback based on in-game actions. The current version is static, but the architecture allows for future integration of dynamic AI using cloud services. It is integrated with Botpress, a third-party AI chatbot platform. Unity acts as the frontend for triggering and displaying responses.
 
-4.     Data/Service Layer (optional in MVP):
+### 4.     Data/Service Layer (optional in MVP):
 
 While the MVP does not require persistent data storage, the architecture leaves room for optional components like local save systems, in-memory session data and cloud integration for analytics or student tracking.
 
-5.     Deployment Layer:
+### 5.     Deployment Layer:
 
 The game is designed for two deployment modes:
 
@@ -170,51 +170,51 @@ Data: cropStage, growthTimer
 
 Harvest Module
 
-• Functionality: Collect mature crops.
+- Functionality: Collect mature crops.
 
-• Input: Tap harvestable crop.
+- Input: Tap harvestable crop.
 
-• Output: Crop disappears, score increases.
+- Output: Crop disappears, score increases.
 
-• Rule: Must be ready stage to harvest.
+- Rule: Must be ready stage to harvest.
 
-• Data: isHarvestable, score, harvestCount
+- Data: isHarvestable, score, harvestCount
 
 Animal Interaction Module
 
-• Functionality: Feed domestic animal (chicken).
+- Functionality: Feed domestic animal (chicken).
 
-• Input: Tap chicken to feed.
+- Input: Tap chicken to feed.
 
-• Output: Animation, score, feedback.
+- Output: Animation, score, feedback.
 
-• Rule: Can only be fed once per session.
+- Rule: Can only be fed once per session.
 
-• Data: animalFed, animalName, feedCount, score
+- Data: animalFed, animalName, feedCount, score
 
 AgriBot Chatbot Module
 
-• Functionality: Provides educational responses.
+- Functionality: Provides educational responses.
 
-• Input: Tap chatbot buttons.
+- Input: Tap chatbot buttons.
 
-• Output: Displays fixed message.
+- Output: Displays fixed message.
 
-• Rule: Static Q&A, no typing input.
+- Rule: Static Q&A, no typing input.
 
-• Data: questionList [], responseList [], selectedQuestionIndex
+- Data: questionList [], responseList [], selectedQuestionIndex
 
 Score Manager Module
 
-• Functionality: Tracks total score.
+- Functionality: Tracks total score.
 
-• Input: Triggered by other scripts.
+- Input: Triggered by other scripts.
 
-• Output: Updates score UI.
+- Output: Updates score UI.
 
-• Rule: Each action = fixed points.
+- Rule: Each action = fixed points.
 
-• Data: score, maxScore, eventTriggered
+- Data: score, maxScore, eventTriggered
 
 Interface Design
 
@@ -230,7 +230,7 @@ API Interface Specifications
 
 Botpress API Integration (AgriBot Chat)
 
-## 1. Converse with AgriBot
+### 1. Converse with AgriBot
 
 Endpoint: /api/v1/bots/agriquest/converse/{userId}
 
@@ -312,14 +312,10 @@ Let’s use a maize crop as an example.
 
 The Crop Can Be in These States:
 
-## 1. Empty Soil.
-
-## 2. Planted.
-
-## 3. Growing
-
+### 1. Empty Soil.
+2. Planted.
+3. Growing
 4. Ready to Harvest.
-
 5. Harvested.
 
 Each state changes when a player does something (like clicking a button), or when enough time has passed.
@@ -329,25 +325,15 @@ Text-Based State Diagram: Crop
 Here’s how it works:
 
 🟫 Empty Soil
-
-↓ (Player plants seed)
-
+  ↓ (Player plants seed)
 🌱 Planted
-
-↓ (Player waters OR time passes)
-
+  ↓ (Player waters OR time passes)
 🌿 Growing
-
-↓ (After a few seconds)
-
+  ↓ (After a few seconds)
 🌽 Ready to Harvest
-
-↓ (Player taps harvest)
-
+  ↓ (Player taps harvest)
 🧺 Harvested
-
-↓ (Resets)
-
+  ↓ (Resets)
 🟫 Back to Empty Soil
 
 Events That Cause Changes (Transitions)
@@ -476,11 +462,11 @@ Android Studio / Unity for packaging APKs for installation on Android devices.
 
 Environments
 
-## DEPLOYMENT ARCHITECTURE FLOWCHART
+## Deployment Architecture Flowchart
 
 Push &pull code
 
-## CI/ CD
+## Ci/ Cd
 
 Build Apk/ WebGL                                              Host WebGL
 
@@ -504,7 +490,7 @@ Issues and bugs will be logged using GitHub Issues with labels such as bug, enha
 
 Team members will assign issues to themselves or others and use milestones aligned with sprint schedules.
 
-## TESTING FLOWCHART
+## Testing Flowchart
 
 Start testing
 
@@ -516,7 +502,7 @@ Improvements
 
 New test cases
 
-## RISKS AND MITIGATION PLANS
+## Risks And Mitigation Plans
 
 Appendices
 

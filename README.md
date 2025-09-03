@@ -74,7 +74,7 @@ The game transforms agriculture lessons into an interactive experience where stu
 5. Submit a Pull Request.  
 
 
-## 🙏 Acknowledgement
+## Acknowledgement
 - CBC curriculum mentors and teachers for guidance.  
 - DialogFlow team for chatbot tools.   
 - Unity community for open-source resources.  
